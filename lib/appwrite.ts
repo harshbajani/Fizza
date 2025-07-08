@@ -9,11 +9,18 @@ import {
 } from "react-native-appwrite";
 
 export const appwriteConfig = {
-  endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
-  projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
-  databaseId: "686b56b5000b8351cb6e",
-  userCollectionId: "686b5714003095707913",
-  platform: "com.harsh.fizza",
+  endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT!,
+  projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
+  databaseId: process.env.EXPO_PUBLIC_DATABASE_ID!,
+  userCollectionId: process.env.EXPO_PUBLIC_USER_COLLECTION_ID!,
+  categoriesCollectionId: process.env.EXPO_PUBLIC_CATEGORIES_COLLECTION_ID!,
+  menuCollectionId: process.env.EXPO_PUBLIC_MENU_COLLECTION_ID!,
+  customizationsCollectionId:
+    process.env.EXPO_PUBLIC_CUSTOMIZATIONS_COLLECTION_ID!,
+  menuCustomizationCollectionId:
+    process.env.EXPO_PUBLIC_MENU_CUSTOMIZATION_COLLECTION_ID!,
+  bucketId: process.env.EXPO_PUBLIC_BUCKET_ID!,
+  platform: process.env.EXPO_PUBLIC_PLATFORM!,
 };
 
 export const client = new Client();
